@@ -1,3 +1,5 @@
+import 'package:bloc_tinder_app/models/album_photo.dart';
+
 import 'address.dart';
 import 'company.dart';
 
@@ -10,7 +12,8 @@ class User {
   final Address address;
   final String phone;
   final Company company;
+  final AlbumPhoto photo;
 
-  User({required this.id, required this.name, required this.username, required this.email, required this.address, required this.phone, required this.company});
+  User({required this.photo, required this.id, required this.name, required this.username, required this.email, required this.address, required this.phone, required this.company});
   
 }

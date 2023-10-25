@@ -5,29 +5,32 @@ import 'package:bloc_tinder_app/pages/home/widgets/user_card/widgets/user_name_t
 import 'package:flutter/material.dart';
 
 class UserCard extends StatelessWidget {
-  final ProfilePhoto profilePhoto;
-  final UsernameText usernameText;
-  final CompanyNameText companyNameText;
-  final BulletListText description;
+   late ProfilePhoto profilePhoto;
+   late UsernameText usernameText;
+   late CompanyNameText companyNameText;
+   late BulletListText description;
 
-  const UserCard(
+   UserCard(
       {super.key,
       required this.profilePhoto,
       required this.usernameText,
       required this.companyNameText,
       required this.description});
 
+  UserCard.fromRawData({required String photoUrl, required String username, required String companyName, required List<String> description, super.key}){
+    profilePhoto = ProfilePhoto(photoUrl: photoUrl);
+    usernameText = UsernameText(text: username,);
+    companyNameText = CompanyNameText(text: companyName);
+    this.description = BulletListText(texts: description);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        profilePhoto,
-        usernameText,
-        companyNameText,
-        description
-      ]),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [profilePhoto, usernameText, companyNameText, description]),
     );
   }
 }
