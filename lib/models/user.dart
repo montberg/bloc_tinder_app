@@ -12,8 +12,8 @@ class User {
   final Address address;
   final String phone;
   final Company company;
-  final AlbumPhoto photo;
+  final List<AlbumPhoto> photos;
 
-  User({required this.photo, required this.id, required this.name, required this.username, required this.email, required this.address, required this.phone, required this.company});
+  User({required this.photos, required this.id, required this.name, required this.username, required this.email, required this.address, required this.phone, required this.company});
   
 }

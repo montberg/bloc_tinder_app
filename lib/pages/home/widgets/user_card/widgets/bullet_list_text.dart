@@ -9,7 +9,7 @@ class BulletListText extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
         text: TextSpan(
-            children: [...texts.map((e) => TextSpan(text: "• $e\n", ))],
+            children: [...texts.map((e) => TextSpan(text: "  • $e\n", ))],
             style: Styles.bulletListTextStyle));
   }
 }

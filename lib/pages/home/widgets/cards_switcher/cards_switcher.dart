@@ -14,6 +14,7 @@ class CardsSwitcher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      elevation: 10,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
